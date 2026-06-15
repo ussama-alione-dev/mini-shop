@@ -33,7 +33,7 @@ const ProductCard = ({
                 <Link className="hover:text-primary" href={`/products/${slug}`}>
                     view details
                 </Link>
-                <button className="bg-primary flex items-center gap-2 p-2 text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors cursor-pointer">
+                <button className="bg-primary flex text-sm md:text-base items-center gap-2 p-2 text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors cursor-pointer">
                     add to card <ShoppingCartIcon size={16} />
                 </button>
             </div>
