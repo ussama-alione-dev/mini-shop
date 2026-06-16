@@ -34,7 +34,7 @@ const ProductCard = ({
                     view details
                 </Link>
                 <button className="bg-primary flex text-sm md:text-base items-center gap-2 p-2 text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors cursor-pointer">
-                    add to card <ShoppingCartIcon size={16} />
+                    add to cart <ShoppingCartIcon size={16} />
                 </button>
             </div>
         </div>
