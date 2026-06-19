@@ -1,5 +1,6 @@
 import { CartItemType } from "@/types/Cart";
 import Image from "next/image";
+import UpdateQuantity from "./UpdateQuantity";
 
 const CartItem = ({ item }: { item: CartItemType }) => {
     return (
@@ -23,6 +24,11 @@ const CartItem = ({ item }: { item: CartItemType }) => {
                         x {item.quantity}
                     </span>
                 </p>
+
+                <UpdateQuantity
+                    quantity={item.quantity}
+                    productId={item.id.toString()}
+                />
             </div>
         </div>
     );

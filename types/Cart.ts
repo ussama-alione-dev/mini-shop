@@ -11,4 +11,5 @@ export type CartContextType = {
     clearCart: () => void;
     getTotalPrice: () => number;
     productisInCart: (productId: string) => boolean;
+    updateQuantity: (productId: string, quantity: number) => void;
 };
