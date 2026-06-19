@@ -7,16 +7,16 @@ import Features from "@/components/Features";
 export default function Home() {
     return (
         <section className="flex flex-col items-center enter min-h-screen py-2">
-            <div className="relative flex flex-col h-[50vh] w-full items-center justify-center text-center mt-14 overflow-hidden">
-                <div className="absolute inset-0 bg-cover  bg-top bg-no-repeat bg-[url('https://images.pexels.com/photos/8386651/pexels-photo-8386651.jpeg')]" />
+            <div className="relative flex rounded-lg  flex-col h-[60vh] w-full items-center  text-center mt-14 overflow-hidden">
+                <div className="absolute  inset-0 bg-cover  bg-top bg-no-repeat bg-[url('https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg')]" />
 
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-foreground/70" />
 
-                <div className="relative z-10">
-                    <h1 className="text-3xl font-bold text-white">
+                <div className="relative z-10 mt-20">
+                    <h1 className="text-3xl font-bold  text-primary sm:text-5xl md:text-6xl">
                         LUXE Boutique - Tech & Style
                     </h1>
-                    <p className="text-lg text-white/70">
+                    <p className="text-lg text-muted-foreground/70 sm:text-xl md:text-2xl mt-4">
                         Discover our exclusive selection of high-end products.
                         Innovation meets minimalist design.
                     </p>
