@@ -16,7 +16,7 @@ export default function Home() {
                     <h1 className="text-3xl font-bold  text-primary sm:text-5xl md:text-6xl">
                         LUXE Boutique - Tech & Style
                     </h1>
-                    <p className="text-lg text-muted-foreground/70 sm:text-xl md:text-2xl mt-4">
+                    <p className="text-lg text-muted-foreground sm:text-xl md:text-2xl mt-4">
                         Discover our exclusive selection of high-end products.
                         Innovation meets minimalist design.
                     </p>

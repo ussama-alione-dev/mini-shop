@@ -21,8 +21,9 @@ const fontMono = Fira_Code({
 });
 
 export const metadata: Metadata = {
-    title: "MaBoutique",
-    description: "Mini boutique en ligne réalisée avec Next.js et TypeScript",
+    title: "Mini Shop",
+    description:
+        "Discover the best products at unbeatable prices. Shop now and enjoy free delivery on orders over 500 DH, secure payment, and easy returns.",
 };
 
 export default function RootLayout({
