@@ -15,8 +15,18 @@ const Header = () => {
             <nav className="flex w-full gap-4 items-center justify-between text-sm">
                 <p>logo</p>
                 <div className="flex gap-4">
-                    <Link href="/">Home</Link>
-                    <Link href="/products">Products</Link>
+                    <Link
+                        className={`hover:text-primary ${pathname === "/" ? "text-primary" : ""}`}
+                        href="/"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        className={`hover:text-primary ${pathname === "/products" ? "text-primary" : ""}`}
+                        href="/products"
+                    >
+                        Products
+                    </Link>
                 </div>
                 <Link
                     href="/cart"
