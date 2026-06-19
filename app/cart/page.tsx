@@ -4,9 +4,12 @@ import { useCartContext } from "@/context/cartContext";
 import CartItem from "@/components/CartItem";
 import { RefreshCw } from "lucide-react";
 import { CartItemType } from "@/types/Cart";
+import EmptyCart from "@/components/EmptyCart";
 
 const CartPage = () => {
     const { cartItems, getTotalPrice } = useCartContext();
+
+    if (cartItems.length === 0) return <EmptyCart />;
 
     return (
         <section className="max-w-7xl mt-16 mx-auto p-4 flex flex-col gap-4">
