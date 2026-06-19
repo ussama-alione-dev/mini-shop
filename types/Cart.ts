@@ -1,11 +1,11 @@
 import { Product } from "@/types/Product";
 
-export interface CartItem extends Product {
+export interface CartItemType extends Product {
     quantity: number;
 }
 
-export type CartcontextType = {
-    cartItems: CartItem[];
+export type CartContextType = {
+    cartItems: CartItemType[];
     addToCart: (product: Product) => void;
     removeFromCart: (productId: string) => void;
     clearCart: () => void;
