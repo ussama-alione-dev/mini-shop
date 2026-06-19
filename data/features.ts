@@ -1,7 +1,7 @@
-import { Future } from "@/types/Future";
+import { Feature } from "@/types/feature";
 
 import { Truck, ShieldCheck, Repeat } from "lucide-react";
-export const futures: Future[] = [
+export const features: Feature[] = [
     {
         icon: Truck,
         title: "Free delivery",

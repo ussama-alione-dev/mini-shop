@@ -18,6 +18,7 @@ const page = () => {
                         category={product.category}
                         price={product.price}
                         slug={product.slug}
+                        description={product.description}
                     />
                 ))}
             </div>

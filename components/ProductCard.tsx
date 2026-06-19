@@ -1,7 +1,6 @@
-import { ShoppingCartIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import AddToCartButton from "./AddToCartButton";
 
 interface ProductCardProps {
     id: number;
@@ -9,6 +8,7 @@ interface ProductCardProps {
     name: string;
     image: string;
     category: string;
+    description: string;
     slug: string;
 }
 
@@ -19,6 +19,7 @@ const ProductCard = ({
     category,
     price,
     slug,
+    description,
 }: ProductCardProps) => {
     return (
         <div className="p-4 bg-card flex flex-col rounded-lg h-full">
@@ -33,9 +34,17 @@ const ProductCard = ({
                 <Link className="hover:text-primary" href={`/products/${slug}`}>
                     view details
                 </Link>
-                <button className="bg-primary flex text-sm md:text-base items-center gap-2 p-2 text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors cursor-pointer">
-                    add to cart <ShoppingCartIcon size={16} />
-                </button>
+                <AddToCartButton
+                    product={{
+                        id,
+                        name,
+                        image,
+                        category,
+                        price,
+                        slug,
+                        description,
+                    }}
+                />
             </div>
         </div>
     );

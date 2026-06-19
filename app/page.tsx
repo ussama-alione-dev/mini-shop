@@ -2,7 +2,7 @@ import { productsForHomePage } from "@/data/products";
 import Link from "next/link";
 import { Telescope } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
-import Futures from "@/components/Futures";
+import Features from "@/components/Features";
 
 export default function Home() {
     return (
@@ -33,6 +33,7 @@ export default function Home() {
                         id={product.id}
                         image={product.image}
                         slug={product.slug}
+                        description={product.description}
                     />
                 ))}
             </div>
@@ -47,7 +48,7 @@ export default function Home() {
                 />
             </Link>
             <div className="w-full bg-card mt-20 p-4 rounded-lg grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Futures />
+                <Features />
             </div>
         </section>
     );

@@ -3,6 +3,7 @@ import { Afacad, Lora, Fira_Code } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
+import CartContextProvider from "@/context/cartContext";
 
 const fontSans = Afacad({
     subsets: ["latin"],
@@ -34,11 +35,13 @@ export default function RootLayout({
             <body
                 className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased flex flex-col min-h-screen`}
             >
-                <Header />
-                <main className="flex-1 text-foreground bg-background p-8">
-                    {children}
-                </main>
-                <Footer />
+                <CartContextProvider>
+                    <Header />
+                    <main className="flex-1 text-foreground bg-background p-8">
+                        {children}
+                    </main>
+                    <Footer />
+                </CartContextProvider>
             </body>
         </html>
     );
