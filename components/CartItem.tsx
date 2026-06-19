@@ -1,6 +1,7 @@
 import { CartItemType } from "@/types/Cart";
 import Image from "next/image";
 import UpdateQuantity from "./UpdateQuantity";
+import RemoveFromCartButton from "./RemoveFromCartButton";
 
 const CartItem = ({ item }: { item: CartItemType }) => {
     return (
@@ -18,17 +19,20 @@ const CartItem = ({ item }: { item: CartItemType }) => {
                 <h1 className="text-xl font-bold">{item.name}</h1>
                 <p>{item.category}</p>
 
-                <p className="text-xl  font-semibold">
-                    ${item.price.toFixed(2)}
-                    <span className="text-primary ml-2 text-sm">
-                        x {item.quantity}
-                    </span>
-                </p>
-
                 <UpdateQuantity
                     quantity={item.quantity}
                     productId={item.id.toString()}
                 />
+
+                <div className="mt-2 w-full items-center justify-between flex">
+                    <p className="text-xl  font-semibold">
+                        ${item.price.toFixed(2)}
+                        <span className="text-primary ml-2 text-sm">
+                            x {item.quantity}
+                        </span>
+                    </p>
+                    <RemoveFromCartButton productId={item.id.toString()} />
+                </div>
             </div>
         </div>
     );

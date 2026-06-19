@@ -3,9 +3,12 @@
 import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { useCartContext } from "@/context/cartContext";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
     const { cartItems } = useCartContext();
+
+    const pathname = usePathname();
 
     return (
         <header className="bg-card fixed  top-0 right-0 left-0 z-50 border border-border  w-full text-foreground py-4 flex items-center justify-between px-8">
